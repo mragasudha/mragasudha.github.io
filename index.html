@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ragasudha Mardhaniyogan — Product Marketing Manager</title>
+<meta name="description" content="B2B SaaS Product Marketing Manager with 6+ years experience in GTM strategy, developer tools, and AI-powered marketing workflows. Ex-Atlassian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --ink-muted: #6b6b65;
+    --ink-faint: #a8a89f;
+    --paper: #f7f5f0;
+    --paper-warm: #edeae2;
+    --accent: #c84b2f;
+    --accent-soft: #f0e8e4;
+    --border: #dedad2;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 3rem;
+    background: rgba(247,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 3rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-inner { max-width: 680px; }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.1s ease forwards;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.25s ease forwards;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.4s ease forwards;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.5s ease forwards;
+  }
+  .tag {
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--ink-muted);
+    background: var(--paper-warm);
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.6s ease forwards;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+  }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--ink); }
+
+  .hero-graphic {
+    position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    width: 340px; height: 340px;
+    opacity: 0.06;
+    pointer-events: none;
+    animation: fadeIn 1s 0.8s ease forwards;
+  }
+
+  /* SECTIONS */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    max-width: 540px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 3rem;
+  }
+
+  /* WORK / CASE STUDIES */
+  .cases { display: flex; flex-direction: column; gap: 1px; }
+  .case {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .case:first-child { border-top: 1px solid var(--border); }
+  .case-meta { }
+  .case-company {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+  .case-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .case-year { font-size: 0.8rem; color: var(--ink-faint); }
+  .case-body { }
+  .case-desc {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+  .case-outcomes {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+  }
+  .outcome {
+    font-size: 0.82rem;
+    padding: 5px 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 2px;
+    font-weight: 400;
+  }
+  .case-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .case-link:hover { color: var(--accent); border-color: var(--accent); }
+  .arrow { font-size: 0.9rem; }
+
+  /* AI WORKFLOWS */
+  .workflows { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .workflow-card {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .workflow-card:hover { border-color: var(--ink-muted); transform: translateY(-2px); }
+  .workflow-icon {
+    width: 36px; height: 36px;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  .workflow-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .workflow-desc {
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .workflow-tools {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .tool-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--ink-muted);
+  }
+  .workflow-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .workflow-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 5rem; align-items: start; }
+  .about-text p {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.9;
+    margin-bottom: 1.25rem;
+  }
+  .about-text p strong { color: var(--ink); font-weight: 500; }
+  .about-sidebar { }
+  .sidebar-block { margin-bottom: 2rem; }
+  .sidebar-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.75rem;
+  }
+  .sidebar-item {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-item:last-child { border-bottom: none; }
+  .sidebar-item strong { color: var(--ink); font-weight: 400; }
+
+  /* CONTACT */
+  .contact-inner {
+    background: var(--ink);
+    border-radius: 4px;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .contact-inner .section-label { color: #c84b2f; }
+  .contact-inner .section-title { color: var(--paper); }
+  .contact-inner p { color: #a8a89f; font-size: 0.95rem; line-height: 1.8; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .contact-link:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.25); }
+  .contact-link-icon { font-size: 1.1rem; opacity: 0.5; }
+  .contact-link-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b65; display: block; margin-bottom: 2px; }
+  .contact-link-val { color: var(--paper); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem 3rem;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 0.06; }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .case { grid-template-columns: 1fr; gap: 1rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-inner { grid-template-columns: 1fr; padding: 2.5rem; gap: 2rem; }
+    .hero-graphic { display: none; }
+    .divider { margin: 0 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-name">Ragasudha M.</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#ai-workflows">AI Workflows</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Product Marketing Manager · Open to Work</p>
+    <h1>GTM strategy for products that <em>developers</em> love.</h1>
+    <p class="hero-desc">6+ years building go-to-market engines for B2B SaaS and developer tools. Ex-Atlassian. Strong in positioning, competitive intelligence, and AI-powered marketing workflows.</p>
+    <div class="hero-tags">
+      <span class="tag">GTM Strategy</span>
+      <span class="tag">Developer Tools</span>
+      <span class="tag">B2B SaaS</span>
+      <span class="tag">Positioning & Messaging</span>
+      <span class="tag">Analyst Relations</span>
+      <span class="tag">Sales Enablement</span>
+      <span class="tag">AI Workflows</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="mailto:ragasudha.yogan@gmail.com" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+  <!-- Decorative SVG -->
+  <svg class="hero-graphic" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="170" cy="170" r="160" stroke="#1a1a18" stroke-width="1"/>
+    <circle cx="170" cy="170" r="120" stroke="#1a1a18" stroke-width="1"/>
+    <circle cx="170" cy="170" r="80" stroke="#1a1a18" stroke-width="1"/>
+    <circle cx="170" cy="170" r="40" stroke="#1a1a18" stroke-width="1"/>
+    <line x1="10" y1="170" x2="330" y2="170" stroke="#1a1a18" stroke-width="1"/>
+    <line x1="170" y1="10" x2="170" y2="330" stroke="#1a1a18" stroke-width="1"/>
+    <line x1="57" y1="57" x2="283" y2="283" stroke="#1a1a18" stroke-width="0.5"/>
+    <line x1="283" y1="57" x2="57" y2="283" stroke="#1a1a18" stroke-width="0.5"/>
+  </svg>
+</div>
+
+<hr class="divider">
+
+<!-- WORK / CASE STUDIES -->
+<section id="work">
+  <p class="section-label reveal">Selected work</p>
+  <h2 class="section-title reveal">GTM launches &amp; marketing strategy</h2>
+  <p class="section-intro reveal">Real work from Atlassian and HCL — problems I owned, approaches I took, and outcomes I drove. Details are illustrative where confidential.</p>
+
+  <div class="cases">
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">Atlassian</p>
+        <h3 class="case-title">Cross-product packaging GTM for Jira Automation</h3>
+        <p class="case-year">2023</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">Owned the end-to-end go-to-market strategy for a packaging update that spanned multiple Jira SKUs and touched tens of thousands of customers globally. Mapped distinct customer journeys for enterprise and SMB segments, selected communication channels, produced positioning and messaging, and coordinated sales and partner enablement — all within a compressed launch window.</p>
+        <div class="case-outcomes">
+          <span class="outcome">Multi-segment GTM</span>
+          <span class="outcome">Cross-functional coordination</span>
+          <span class="outcome">Sales &amp; partner enablement</span>
+          <span class="outcome">Enterprise + SMB</span>
+        </div>
+        <a href="work/atlassian-automation-gtm.html" class="case-link">Read the case study <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">Atlassian</p>
+        <h3 class="case-title">Competitive intelligence brief that shaped FY'24 roadmap</h3>
+        <p class="case-year">2023</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">Conducted a structured competitive analysis of automation capabilities across 5+ rivals in the DevOps and project management space. Synthesized positioning gaps, feature differentiators, and messaging weaknesses into a strategic brief presented to product leadership — directly influencing Atlassian Automation's FY'24 roadmap priorities.</p>
+        <div class="case-outcomes">
+          <span class="outcome">Competitive analysis</span>
+          <span class="outcome">Product influence</span>
+          <span class="outcome">Strategic brief</span>
+        </div>
+        <a href="work/competitive-intelligence.html" class="case-link">Read the case study <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">Harness</p>
+        <h3 class="case-title">Product launch strategy — Cloud Asset Governance</h3>
+        <p class="case-year">2023 · Personas · Competitive analysis · Positioning · GTM plan · Blog</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">A complete product marketing strategy brief produced independently based on public research — covering customer need, FinOps and DevOps personas, competitive landscape analysis across 170+ vendors, positioning, segmented messaging, a full GTM plan, and a community engagement strategy. Paired with a finished blog post that shows the same strategic thinking translated into content execution.</p>
+        <div class="case-outcomes">
+          <span class="outcome">Full GTM strategy</span>
+          <span class="outcome">Competitive analysis</span>
+          <span class="outcome">Dual-persona messaging</span>
+          <span class="outcome">Blog copy</span>
+          <span class="outcome">Community strategy</span>
+        </div>
+        <a href="work/harness-pmm-brief.html" class="case-link">View the strategy brief + blog <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">HCL Software</p>
+        <h3 class="case-title">Building a GTM motion for HCL OneTest from scratch</h3>
+        <p class="case-year">2019–2022</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">As the founding PMM for HCL OneTest — a cloud-native test automation platform for developers — I built the go-to-market engine from the ground up. This spanned persona development, product positioning, multi-channel campaigns, analyst briefings (Gartner, Forrester, IDC), industry event strategy (EuroSTAR, STAREAST), and sales enablement. Managed a $500K annual marketing budget with year-over-year pipeline growth.</p>
+        <div class="case-outcomes">
+          <span class="outcome">$500K budget ownership</span>
+          <span class="outcome">10x analyst coverage</span>
+          <span class="outcome">Full-funnel demand gen</span>
+          <span class="outcome">Developer GTM</span>
+        </div>
+        <a href="work/hcl-onetest-gtm.html" class="case-link">Read the case study <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">HCL Software</p>
+        <h3 class="case-title">HCL Secure DevOps brochure — OneTest section</h3>
+        <p class="case-year">2022 · Sales collateral</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">Wrote and positioned the HCL OneTest section of a multi-product sales brochure covering the full HCL Secure DevOps portfolio. The challenge: make a six-product testing suite read as a coherent platform — in limited space, for a skimming audience of DevOps and QA buyers.</p>
+        <div class="case-outcomes">
+          <span class="outcome">Product messaging</span>
+          <span class="outcome">Platform positioning</span>
+          <span class="outcome">Sales collateral</span>
+          <span class="outcome">Constraint-led copy</span>
+        </div>
+        <a href="work/hcl-onetest-brochure.html" class="case-link">View the content showcase <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">HCL Software</p>
+        <h3 class="case-title">Product page in the HCL Secure DevOps brochure</h3>
+        <p class="case-year">2022 · Sales collateral</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">Wrote and structured the HCL OneTest product page within an 8-page multi-product brochure covering the full Secure DevOps portfolio. Responsible for the introduction, capability messaging, and product module architecture — balancing technical depth with readability for a DevOps-savvy audience. Used across sales, events, and partner enablement.</p>
+        <div class="case-outcomes">
+          <span class="outcome">Technical copywriting</span>
+          <span class="outcome">Product positioning</span>
+          <span class="outcome">Sales collateral</span>
+          <span class="outcome">Visual messaging structure</span>
+        </div>
+        <a href="work/hcl-onetest-brochure.html" class="case-link">View the content showcase <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-meta">
+        <p class="case-company">HCL Technologies</p>
+        <h3 class="case-title">Growing analyst coverage 10x in two years</h3>
+        <p class="case-year">2016–2018</p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">As Global Engagement Manager for HCL Engineering Services, I built the analyst relations function almost from zero — growing our analyst network 5x and increasing coverage in Gartner, Forrester, and IDC reports by 10x in two years. Led analyst presence at Mobile World Congress 2017 and 2018, coordinating briefings, demos, and executive meetings.</p>
+        <div class="case-outcomes">
+          <span class="outcome">5x analyst network growth</span>
+          <span class="outcome">10x report coverage</span>
+          <span class="outcome">Gartner · Forrester · IDC</span>
+          <span class="outcome">MWC 2017 &amp; 2018</span>
+        </div>
+        <a href="work/analyst-relations.html" class="case-link">Read the case study <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AI WORKFLOWS -->
+<section id="ai-workflows">
+  <p class="section-label reveal">AI in practice</p>
+  <h2 class="section-title reveal">How I use AI in my PMM workflow</h2>
+  <p class="section-intro reveal">These aren't just tools I've heard of — these are workflows I've built and tested. Each one includes my actual prompts and sample outputs.</p>
+
+  <div class="workflows">
+
+    <div class="workflow-card reveal">
+      <svg class="workflow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+      </svg>
+      <h3 class="workflow-title">Competitive intelligence in 2 hours, not 2 days</h3>
+      <p class="workflow-desc">How I use Perplexity for real-time market scanning, Claude for synthesis and gap analysis, and Notion AI to turn it into a shareable brief — in a single afternoon.</p>
+      <div class="workflow-tools">
+        <span class="tool-badge">Perplexity</span>
+        <span class="tool-badge">Claude</span>
+        <span class="tool-badge">Notion AI</span>
+      </div>
+      <a href="workflows/competitive-intelligence-workflow.html" class="workflow-link">See the workflow + prompts →</a>
+    </div>
+
+    <div class="workflow-card reveal">
+      <svg class="workflow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+      </svg>
+      <h3 class="workflow-title">Building rich buyer personas from sparse data</h3>
+      <p class="workflow-desc">My workflow for turning a handful of customer interviews and G2/Reddit signals into a full persona doc — with jobs-to-be-done, pain points, and messaging hooks.</p>
+      <div class="workflow-tools">
+        <span class="tool-badge">Claude</span>
+        <span class="tool-badge">ChatGPT</span>
+        <span class="tool-badge">G2 Reviews</span>
+      </div>
+      <a href="workflows/persona-workflow.html" class="workflow-link">See the workflow + prompts →</a>
+    </div>
+
+    <div class="workflow-card reveal">
+      <svg class="workflow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+      </svg>
+      <h3 class="workflow-title">Drafting positioning documents 3x faster</h3>
+      <p class="workflow-desc">How I structure AI-assisted positioning sprints — from raw input (ICP, competitive landscape, win/loss themes) to a reviewed positioning doc, in one focused session.</p>
+      <div class="workflow-tools">
+        <span class="tool-badge">Claude</span>
+        <span class="tool-badge">Notion</span>
+      </div>
+      <a href="workflows/positioning-workflow.html" class="workflow-link">See the workflow + prompts →</a>
+    </div>
+
+    <div class="workflow-card reveal">
+      <svg class="workflow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+      <h3 class="workflow-title">Sales enablement content at scale</h3>
+      <p class="workflow-desc">How I use AI to generate first drafts of battle cards, objection-handling guides, and talk tracks — then add the strategic layer that only a PMM can provide.</p>
+      <div class="workflow-tools">
+        <span class="tool-badge">Claude</span>
+        <span class="tool-badge">ChatGPT</span>
+        <span class="tool-badge">Gamma</span>
+      </div>
+      <a href="workflows/sales-enablement-workflow.html" class="workflow-link">See the workflow + prompts →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Positioning is everything. I've spent years proving it.</h2>
+      <p>I'm a product marketing manager with 6+ years in B2B tech, specializing in developer tools and cloud-native SaaS. I've owned GTM strategy at Atlassian — one of the most demanding product marketing environments in the industry — and built demand generation and analyst relations programs from scratch at HCL Software.</p>
+      <p>My edge is <strong>making technical products legible to the humans who buy them</strong>. I think in personas, speak in narratives, and measure in pipeline. I've managed $500K marketing budgets, briefed Gartner and Forrester, and led launches that touched tens of thousands of customers.</p>
+      <p>In 2023, I took intentional time off to recover from a medical procedure. I used that time to stay current — completing certifications in Generative AI for Marketing (AMA) and AI for Marketers (HubSpot), and building the AI-powered workflows you'll find on this site.</p>
+      <p>I'm now actively looking for my next PMM role — ideally at a company building something ambitious in AI-native B2B SaaS or developer tooling.</p>
+      <a href="mailto:ragasudha.yogan@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">Let's talk →</a>
+    </div>
+    <div class="about-sidebar reveal">
+      <div class="sidebar-block">
+        <p class="sidebar-label">Experience</p>
+        <div class="sidebar-item"><strong>Atlassian</strong> — Product Marketing Manager</div>
+        <div class="sidebar-item"><strong>HCL Software</strong> — Product Marketing Manager</div>
+        <div class="sidebar-item"><strong>HCL Technologies</strong> — Global Engagement Manager</div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Education</p>
+        <div class="sidebar-item"><strong>IIM Indore</strong> — PGDM (MBA)</div>
+        <div class="sidebar-item"><strong>Anna University</strong> — B.E. Electronics &amp; Communications</div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Certifications</p>
+        <div class="sidebar-item">Generative AI for Marketing — <strong>AMA, 2026</strong></div>
+        <div class="sidebar-item">AI for Marketers — <strong>HubSpot, 2026</strong></div>
+        <div class="sidebar-item">Product Marketing — <strong>Stanford Online, 2023</strong></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Location</p>
+        <div class="sidebar-item">Fremont, CA — open to hybrid or remote</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top: 0;">
+  <div class="contact-inner reveal">
+    <div>
+      <p class="section-label">Contact</p>
+      <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">If you're building something ambitious, I'd like to hear about it.</h2>
+      <p style="margin-top: 1rem;">Open to Senior PMM and PMM roles at AI-native and developer-focused B2B SaaS companies. Happy to chat — no pressure.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:ragasudha.yogan@gmail.com" class="contact-link">
+        <span class="contact-link-icon">✉</span>
+        <div>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-val">ragasudha.yogan@gmail.com</span>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/mragasudha" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link-icon">in</span>
+        <div>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-val">linkedin.com/in/mragasudha</span>
+        </div>
+      </a>
+      <a href="Ragasudha_PMM_Resume.pdf" class="contact-link">
+        <span class="contact-link-icon">↓</span>
+        <div>
+          <span class="contact-link-label">Resume</span>
+          <span class="contact-link-val">Download PDF</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ragasudha Mardhaniyogan · Built with intention, not templates.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
