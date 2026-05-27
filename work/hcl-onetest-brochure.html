@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Brochure: HCL OneTest — Ragasudha M.</title>
+<meta name="description" content="A product marketing case study: writing and producing the HCL OneTest product page within the HCL Secure DevOps brochure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18; --ink-muted: #6b6b65; --ink-faint: #a8a89f;
+    --paper: #f7f5f0; --paper-warm: #edeae2; --accent: #c84b2f;
+    --accent-soft: #f0e8e4; --border: #dedad2;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; font-size: 16px; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--accent); }
+  .hero { max-width: 860px; margin: 0 auto; padding: 7rem 2rem 3rem; }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.12; margin-bottom: 1.25rem; }
+  .hero-meta { display: flex; gap: 0; flex-wrap: wrap; margin-bottom: 2rem; align-items: center; }
+  .meta-item { font-size: 0.82rem; color: var(--ink-muted); }
+  .meta-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); display: inline-block; margin: 0 0.75rem; vertical-align: middle; }
+  .hero-summary { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; border-left: 3px solid var(--accent); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+  .outcomes-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem; }
+  .outcome { font-size: 0.8rem; padding: 5px 14px; background: var(--accent-soft); color: var(--accent); border-radius: 2px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0 2rem; }
+  .body-container { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+  .main-content h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2.5rem 0 0.75rem; line-height: 1.2; }
+  .main-content h2:first-child { margin-top: 0; }
+  .main-content p { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 1rem; }
+  .main-content ul { margin: 0.75rem 0 1rem 1.25rem; }
+  .main-content li { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.8; margin-bottom: 0.35rem; }
+  .main-content strong { color: var(--ink); font-weight: 500; }
+  .callout { background: var(--paper-warm); border-radius: 4px; border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0; }
+  .callout-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .callout p { margin: 0; font-size: 0.92rem; }
+
+  /* Page context strip */
+  .brochure-context { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 1.5rem 0 2rem; }
+  .thumb-wrap { position: relative; border-radius: 2px; overflow: hidden; border: 1.5px solid var(--border); }
+  .thumb-wrap.mine { border: 2px solid var(--accent); }
+  .thumb-wrap img { width: 100%; height: auto; display: block; filter: grayscale(30%) opacity(0.7); }
+  .thumb-wrap.mine img { filter: none; }
+  .thumb-label { position: absolute; bottom: 0; left: 0; right: 0; font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 6px; background: rgba(26,26,24,0.65); color: white; text-align: center; }
+  .thumb-wrap.mine .thumb-label { background: var(--accent); }
+  .mine-badge { position: absolute; top: 5px; right: 5px; font-size: 0.56rem; letter-spacing: 0.05em; text-transform: uppercase; background: var(--accent); color: white; padding: 2px 5px; border-radius: 2px; }
+
+  /* Full page preview */
+  .page-preview-wrapper { margin: 2rem 0; background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; }
+  .preview-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
+  .page-preview-frame { background: white; border-radius: 2px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .page-preview-frame img { width: 100%; height: auto; display: block; }
+
+  .sidebar { position: sticky; top: 6rem; }
+  .sidebar-card { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .sidebar-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
+  .sidebar-item { font-size: 0.88rem; color: var(--ink-muted); padding: 0.35rem 0; border-bottom: 1px solid var(--border); }
+  .sidebar-item:last-child { border-bottom: none; }
+  .sidebar-item strong { color: var(--ink); font-weight: 400; }
+  .skill-tag { display: inline-block; font-size: 0.75rem; padding: 3px 10px; border: 1px solid var(--border); border-radius: 2px; color: var(--ink-muted); margin: 3px 3px 3px 0; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 3rem; font-size: 0.85rem; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .back-link:hover { color: var(--accent); }
+  footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--border); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .hero > * { animation: fadeUp 0.5s ease both; }
+  .eyebrow { animation-delay: 0.05s; } h1 { animation-delay: 0.15s; } .hero-meta { animation-delay: 0.22s; } .hero-summary { animation-delay: 0.3s; } .outcomes-row { animation-delay: 0.38s; }
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { padding: 6rem 1.25rem 2rem; }
+    .body-container { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem 4rem; }
+    .sidebar { position: static; }
+    .brochure-context { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-name">Ragasudha M.</a>
+  <a href="../index.html#work" class="nav-back">← Back to work</a>
+</nav>
+
+<div class="hero">
+  <p class="eyebrow">Product Collateral · HCL Software · 2022</p>
+  <h1>HCL Secure DevOps Brochure — OneTest product page</h1>
+  <div class="hero-meta">
+    <span class="meta-item">HCL OneTest</span><span class="meta-dot"></span>
+    <span class="meta-item">Product brochure</span><span class="meta-dot"></span>
+    <span class="meta-item">DevOps / developer audience</span><span class="meta-dot"></span>
+    <span class="meta-item">Sales enablement</span>
+  </div>
+  <p class="hero-summary">As PMM for HCL OneTest, I owned the product page within this multi-product Secure DevOps brochure — writing the positioning, messaging, and capability copy for HCL OneTest's section. The brochure was used across sales conversations, event distribution, and partner enablement.</p>
+  <div class="outcomes-row">
+    <span class="outcome">Product positioning</span>
+    <span class="outcome">Technical copywriting</span>
+    <span class="outcome">Sales collateral</span>
+    <span class="outcome">Cross-product narrative</span>
+    <span class="outcome">Developer audience</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="body-container">
+  <div class="main-content">
+
+    <h2>Context and my contribution</h2>
+    <p>This brochure covers three products in HCL Software's Secure DevOps portfolio: HCL OneTest, HCL Accelerate, and HCL AppScan. As the PMM for OneTest, I was responsible for <strong>page 5 — the OneTest product page</strong>: writing the introduction, structuring the capability list, defining the product module overview, and collaborating with design on layout and visual hierarchy.</p>
+    <p>The other product pages were owned by their respective PMMs. My involvement in the shared intro copy (pages 3–4) was collaborative — the framing of OneTest's role within the broader DevOps toolchain shaped how the overall narrative was constructed.</p>
+
+    <h2>My page in context</h2>
+    <p>OneTest is featured first in the product section — a deliberate positioning decision reflecting its role as the testing layer anchoring the DevSecOps pipeline. The pages below show where my page sits within the full brochure, highlighted in orange.</p>
+
+    <div class="brochure-context">
+      <div class="thumb-wrap">
+        <img src="../assets/brochure-p1-thumb.jpg" alt="Cover page">
+        <span class="thumb-label">Cover</span>
+      </div>
+      <div class="thumb-wrap">
+        <img src="../assets/brochure-p3-thumb.jpg" alt="Table of contents">
+        <span class="thumb-label">Contents</span>
+      </div>
+      <div class="thumb-wrap">
+        <img src="../assets/brochure-p4-thumb.jpg" alt="Shared intro page">
+        <span class="thumb-label">Intro (shared)</span>
+      </div>
+      <div class="thumb-wrap mine">
+        <img src="../assets/brochure-p5-thumb.jpg" alt="HCL OneTest product page">
+        <span class="mine-badge">My page</span>
+        <span class="thumb-label">OneTest — p.5</span>
+      </div>
+    </div>
+
+    <h2>The OneTest page</h2>
+    <div class="page-preview-wrapper">
+      <p class="preview-label">HCL OneTest — page 5 of 8 · written and structured by me</p>
+      <div class="page-preview-frame">
+        <img src="../assets/brochure-onetest-page.jpg" alt="HCL OneTest product page from the HCL Secure DevOps brochure, showing introduction, product module icons, and capabilities section">
+      </div>
+    </div>
+
+    <h2>Messaging decisions on the page</h2>
+    <p>The OneTest page had to accomplish something specific: introduce a <strong>multi-module testing platform to a DevOps-savvy audience</strong> who would be skeptical of marketing language and quick to disengage from anything generic. Every structural choice had a rationale.</p>
+
+    <p><strong>The opening paragraph leads with the buyer's problem, not the product.</strong> "Delivering modern applications is complex" speaks directly to an engineering leader under release pressure — not a procurement team. This is the same principle I applied in the e-guide: earn trust by demonstrating you understand the pain before you introduce the solution.</p>
+
+    <p><strong>"HCL OneTest is that testing solution"</strong> is a deliberate single-sentence paragraph. After two paragraphs of problem framing, this lands with weight. Delay the product introduction just long enough and it becomes a payoff rather than a pitch.</p>
+
+    <p><strong>The six product modules</strong> (UI, Performance, API, Data, Server, Virtualization) are shown visually rather than listed. This communicates platform breadth at a glance — a buyer scanning the page immediately understands OneTest is an integrated platform, not a point solution.</p>
+
+    <p><strong>The capabilities section mirrors the module layout</strong> — six items, two columns — so the eye naturally connects each use case to the product grid above. The parallel structure reinforces the message that OneTest covers the full testing spectrum without requiring the reader to read every word.</p>
+
+    <div class="callout">
+      <p class="callout-label">Positioning challenge</p>
+      <p>OneTest competed against more recognized names in the testing space. The page had to establish credibility quickly with readers who might not know HCL Software's testing products. Leading with the problem rather than the vendor name — and immediately showing six distinct modules — was designed to signal enterprise-grade breadth without relying on brand recognition.</p>
+    </div>
+
+    <h2>How this collateral was used</h2>
+    <ul>
+      <li><strong>Sales conversations</strong> — shared as a pre-meeting asset and left with prospects after discovery calls</li>
+      <li><strong>Events</strong> — distributed at EuroSTAR, STAREAST, and other industry conferences where OneTest had booth presence</li>
+      <li><strong>Partner enablement</strong> — used by channel partners to introduce the Secure DevOps portfolio to their own customers</li>
+      <li><strong>Digital</strong> — available as a gated PDF download on the HCL Software website</li>
+    </ul>
+
+    <h2>What this demonstrates</h2>
+    <p>Brochure copy is one of the harder content formats in product marketing — limited space, a technically sophisticated audience, and no tolerance for filler. Every word has to earn its place. Writing tight, credible, benefit-led copy for a complex multi-module platform, and structuring it so it works visually as well as verbally, is a core PMM skill. This page is a direct example of it.</p>
+
+    <a href="../index.html#work" class="back-link">← Back to all work</a>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <p class="sidebar-label">Project details</p>
+      <div class="sidebar-item"><strong>Company</strong><br>HCL Software Products Ltd.</div>
+      <div class="sidebar-item"><strong>Year</strong><br>2022</div>
+      <div class="sidebar-item"><strong>Format</strong><br>Multi-product brochure · 8 pages</div>
+      <div class="sidebar-item"><strong>My contribution</strong><br>OneTest product page (p.5) — copy, messaging &amp; structure</div>
+      <div class="sidebar-item"><strong>Audience</strong><br>DevOps leads, QA managers, Engineering VPs</div>
+      <div class="sidebar-item"><strong>Usage</strong><br>Sales, events, partner enablement, web</div>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-label">Skills demonstrated</p>
+      <span class="skill-tag">Technical copywriting</span>
+      <span class="skill-tag">Product positioning</span>
+      <span class="skill-tag">Sales collateral</span>
+      <span class="skill-tag">Messaging hierarchy</span>
+      <span class="skill-tag">Developer GTM</span>
+      <span class="skill-tag">Visual structure</span>
+      <span class="skill-tag">Cross-functional collaboration</span>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-label">OneTest modules covered</p>
+      <div class="sidebar-item">OneTest <strong>UI</strong></div>
+      <div class="sidebar-item">OneTest <strong>Performance</strong></div>
+      <div class="sidebar-item">OneTest <strong>API</strong></div>
+      <div class="sidebar-item">OneTest <strong>Data</strong></div>
+      <div class="sidebar-item">OneTest <strong>Server</strong></div>
+      <div class="sidebar-item">OneTest <strong>Virtualization</strong></div>
+    </div>
+  </aside>
+</div>
+
+<footer>© 2026 Ragasudha Mardhaniyogan · <a href="../index.html" style="color: var(--ink-faint);">Back to portfolio</a></footer>
+</body>
+</html>
