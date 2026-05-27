@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitive Intelligence Workflow — Ragasudha M.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18; --ink-muted: #6b6b65; --ink-faint: #a8a89f;
+    --paper: #f7f5f0; --paper-warm: #edeae2; --accent: #c84b2f;
+    --accent-soft: #f0e8e4; --border: #dedad2;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --mono: 'Courier New', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; font-size: 16px; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--ink-muted); text-decoration: none; }
+  .nav-back:hover { color: var(--accent); }
+  .container { max-width: 740px; margin: 0 auto; padding: 7rem 2rem 5rem; }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; }
+  .intro { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+  .tools-used { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 3rem; }
+  .tool { font-size: 0.78rem; letter-spacing: 0.05em; padding: 4px 12px; border: 1px solid var(--border); border-radius: 2px; color: var(--ink-muted); }
+  h2 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 2.5rem; }
+  h3 { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+  p { color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.85; }
+  .step { background: var(--paper-warm); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; padding: 1.5rem; margin: 1.5rem 0; }
+  .step-num { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
+  .step-title { font-weight: 500; font-size: 1rem; margin-bottom: 0.5rem; color: var(--ink); }
+  .step p { margin-bottom: 0; }
+  .prompt-block { background: #1a1a18; border-radius: 4px; padding: 1.5rem; margin: 1.25rem 0; position: relative; }
+  .prompt-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
+  .prompt-text { font-family: var(--mono); font-size: 0.82rem; color: #e8e4dc; line-height: 1.7; white-space: pre-wrap; }
+  .output-block { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.25rem 0; }
+  .output-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
+  .output-text { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.8; }
+  .time-badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 0.78rem; padding: 4px 12px; border-radius: 2px; margin-bottom: 2rem; }
+  footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--border); margin-top: 4rem; }
+  @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } .container { padding: 6rem 1.25rem 3rem; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-name">Ragasudha M.</a>
+  <a href="../index.html#ai-workflows" class="nav-back">← Back to workflows</a>
+</nav>
+
+<div class="container">
+  <p class="eyebrow">AI Workflow · Competitive Intelligence</p>
+  <h1>Competitive intelligence in 2 hours, not 2 days</h1>
+  <span class="time-badge">⏱ 2–3 hours end-to-end</span>
+  <p class="intro">Competitive analysis used to take me the better part of a week — reading product pages, sitting through demos, combing through G2, synthesizing notes. This workflow compresses that into a focused afternoon session using three tools in sequence. The AI handles the scanning and first-pass synthesis. I handle the strategic interpretation and so-what.</p>
+
+  <div class="tools-used">
+    <span class="tool">Perplexity AI</span>
+    <span class="tool">Claude</span>
+    <span class="tool">Notion AI</span>
+  </div>
+
+  <h2>The workflow</h2>
+
+  <div class="step">
+    <p class="step-num">Step 1 · ~30 min</p>
+    <p class="step-title">Market scanning with Perplexity</p>
+    <p>I use Perplexity (not Google) for the initial scan because it synthesizes live sources with citations. I run 3–5 targeted queries per competitor to build a raw intelligence file.</p>
+  </div>
+
+  <h3>Prompts I use in Perplexity:</h3>
+  <div class="prompt-block">
+    <p class="prompt-label">Prompt 1 — positioning scan</p>
+    <p class="prompt-text">What is [Competitor]'s current positioning and messaging for their [product category] product? How have they described it in recent press releases, blog posts, or product pages in the last 6 months?</p>
+  </div>
+  <div class="prompt-block">
+    <p class="prompt-label">Prompt 2 — customer sentiment</p>
+    <p class="prompt-text">What are the most common complaints and praises about [Competitor]'s [product] on G2, Reddit, and Hacker News? Focus on what users say about [specific feature area].</p>
+  </div>
+  <div class="prompt-block">
+    <p class="prompt-label">Prompt 3 — recent moves</p>
+    <p class="prompt-text">What product launches, pricing changes, or marketing campaigns has [Competitor] made in the last 3 months? Include analyst commentary if available.</p>
+  </div>
+
+  <div class="step">
+    <p class="step-num">Step 2 · ~45 min</p>
+    <p class="step-title">Synthesis and gap analysis with Claude</p>
+    <p>I paste my Perplexity outputs into Claude with a structured prompt that asks it to find patterns, flag positioning gaps, and identify where my product has a credible advantage. This is where the real leverage is.</p>
+  </div>
+
+  <div class="prompt-block">
+    <p class="prompt-label">Claude synthesis prompt</p>
+    <p class="prompt-text">Here is raw competitive intelligence I've gathered on [Competitor A], [Competitor B], and [Competitor C] in the [category] space.
+
+[paste Perplexity outputs]
+
+My product is [brief description]. Our ICP is [description]. Our core differentiation claim is [claim].
+
+Please analyze this intelligence and produce:
+1. A positioning map — how each competitor is positioning relative to each other
+2. Messaging gaps — things none of them are saying that could be a whitespace opportunity
+3. Where our differentiation claim is credible vs. where it's vulnerable
+4. 3 recommended messaging angles we could test, ranked by credibility
+
+Be direct. Flag where the data is thin and I need more research.</p>
+  </div>
+
+  <h3>Sample output (illustrative):</h3>
+  <div class="output-block">
+    <p class="output-label">Claude's response — excerpt</p>
+    <p class="output-text"><strong>Positioning map:</strong> Competitor A is anchored on "enterprise-grade reliability," B on "developer-first simplicity," and C on "AI-native automation." None of them are leading with time-to-value or onboarding speed.<br><br><strong>Messaging gap:</strong> All three assume the buyer already knows why they need this category. None are writing for the "automation-curious but not yet committed" buyer who needs permission to start small. This is a credible whitespace.<br><br><strong>Your differentiation — vulnerable here:</strong> Your claim of "enterprise-grade" is at risk because Competitor A has 3 Gartner mentions in the last 6 months. Don't lead with that claim without a proof point.</p>
+  </div>
+
+  <div class="step">
+    <p class="step-num">Step 3 · ~30 min</p>
+    <p class="step-title">Brief creation with Notion AI</p>
+    <p>I take the Claude output into Notion and use Notion AI to help format it into a shareable intelligence brief with a one-page executive summary, full analysis, and recommended actions. I then review and edit — the strategic layer and "so what" always needs a human PMM.</p>
+  </div>
+
+  <h2>What I contribute that AI can't</h2>
+  <p>The workflow above handles research velocity and pattern recognition. What it can't do: assess whether a competitor's move is a real threat or a marketing stunt, know which sales objections are actually coming up in deals, or make the judgment call on which positioning angle to bet on. That's the PMM's job — and it's where experience with technical buyers pays off.</p>
+
+  <h2>Tools and cost</h2>
+  <p>Perplexity Pro ($20/mo), Claude Pro ($20/mo), Notion (free tier works). Total: $40/mo for a workflow that replaces multiple days of manual research.</p>
+
+</div>
+
+<footer>© 2026 Ragasudha Mardhaniyogan · <a href="../index.html" style="color: var(--ink-faint);">Back to portfolio</a></footer>
+</body>
+</html>
