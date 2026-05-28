@@ -36,18 +36,14 @@
   .main-content h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2.5rem 0 0.75rem; line-height: 1.2; padding-top: 1rem; border-top: 1px solid var(--border); }
   .main-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
   .main-content p { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 1rem; }
-  .main-content ul { margin: 0.75rem 0 1rem 1.25rem; }
-  .main-content li { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.8; margin-bottom: 0.35rem; }
   .main-content strong { color: var(--ink); font-weight: 500; }
   .callout { background: var(--paper-warm); border-radius: 4px; border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
   .callout-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
   .callout p { margin: 0; font-size: 0.92rem; }
-  .page-preview { margin: 1.5rem 0 2rem; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--paper-warm); }
-  .preview-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+  .page-preview { margin: 1.5rem 0 2rem; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .preview-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--paper-warm); }
   .preview-img { width: 100%; height: auto; display: block; }
-  .preview-placeholder { padding: 3rem 2rem; text-align: center; }
-  .preview-placeholder p { font-size: 0.85rem; color: var(--ink-faint); margin: 0; }
-  .preview-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; font-size: 0.82rem; color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+  .preview-link { display: inline-flex; align-items: center; gap: 6px; margin: 0.75rem 1rem 1rem; font-size: 0.82rem; color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
   .preview-link:hover { color: var(--accent); border-color: var(--accent); }
   .sidebar { position: sticky; top: 6rem; }
   .sidebar-card { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem; }
@@ -102,11 +98,9 @@
     <p>The Atlassian Automation webpage sits at <a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--border);">atlassian.com/platform/automation</a> and serves as the primary destination for anyone researching Atlassian's automation capabilities across Jira, Confluence, and the broader platform.</p>
 
     <div class="page-preview">
-      <p class="preview-label">Live page — atlassian.com/platform/automation</p>
-      <div class="preview-placeholder">
-        <p>Screenshot to be added</p>
-        <a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" class="preview-link">View the live page →</a>
-      </div>
+      <p class="preview-label">atlassian.com/platform/automation</p>
+      <img src="../assets/atlassian-automation-screenshot.jpg" alt="Atlassian Automation product webpage screenshot" class="preview-img">
+      <a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" class="preview-link">View the live page →</a>
     </div>
 
     <h2>What I did</h2>
