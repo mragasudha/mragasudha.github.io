@@ -1,4 +1,4 @@
-# Ragasudha M. — PMM Portfolio
+# Ragasudha Mardhaniyogan — PMM Portfolio
 
 Personal portfolio site built for GitHub Pages. No build tools, no dependencies — just HTML and CSS.
 
