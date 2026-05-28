@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage Revamp: Atlassian Automation — Ragasudha M.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18; --ink-muted: #6b6b65; --ink-faint: #a8a89f;
+    --paper: #f7f5f0; --paper-warm: #edeae2; --accent: #c84b2f;
+    --accent-soft: #f0e8e4; --border: #dedad2;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; font-size: 16px; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--accent); }
+  .hero { max-width: 860px; margin: 0 auto; padding: 7rem 2rem 3rem; }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.12; margin-bottom: 1.25rem; }
+  .hero-meta { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 2rem; }
+  .meta-item { font-size: 0.82rem; color: var(--ink-muted); }
+  .meta-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); display: inline-block; margin: 0 0.75rem; vertical-align: middle; }
+  .hero-summary { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; border-left: 3px solid var(--accent); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+  .outcomes-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem; }
+  .outcome { font-size: 0.8rem; padding: 5px 14px; background: var(--accent-soft); color: var(--accent); border-radius: 2px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0 2rem; }
+  .body-container { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; display: grid; grid-template-columns: 1fr 240px; gap: 4rem; align-items: start; }
+  .main-content h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2.5rem 0 0.75rem; line-height: 1.2; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .main-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+  .main-content p { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 1rem; }
+  .main-content ul { margin: 0.75rem 0 1rem 1.25rem; }
+  .main-content li { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.8; margin-bottom: 0.35rem; }
+  .main-content strong { color: var(--ink); font-weight: 500; }
+  .callout { background: var(--paper-warm); border-radius: 4px; border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .callout-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .callout p { margin: 0; font-size: 0.92rem; }
+  .page-preview { margin: 1.5rem 0 2rem; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--paper-warm); }
+  .preview-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+  .preview-img { width: 100%; height: auto; display: block; }
+  .preview-placeholder { padding: 3rem 2rem; text-align: center; }
+  .preview-placeholder p { font-size: 0.85rem; color: var(--ink-faint); margin: 0; }
+  .preview-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; font-size: 0.82rem; color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+  .preview-link:hover { color: var(--accent); border-color: var(--accent); }
+  .sidebar { position: sticky; top: 6rem; }
+  .sidebar-card { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .sidebar-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
+  .sidebar-item { font-size: 0.85rem; color: var(--ink-muted); padding: 0.35rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+  .sidebar-item:last-child { border-bottom: none; }
+  .sidebar-item strong { color: var(--ink); font-weight: 400; display: block; font-size: 0.8rem; }
+  .skill-tag { display: inline-block; font-size: 0.75rem; padding: 3px 10px; border: 1px solid var(--border); border-radius: 2px; color: var(--ink-muted); margin: 3px 3px 3px 0; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 3rem; font-size: 0.85rem; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .back-link:hover { color: var(--accent); }
+  footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--border); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .hero > * { animation: fadeUp 0.5s ease both; }
+  .eyebrow { animation-delay: 0.05s; } h1 { animation-delay: 0.15s; } .hero-meta { animation-delay: 0.22s; } .hero-summary { animation-delay: 0.28s; } .outcomes-row { animation-delay: 0.35s; }
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { padding: 6rem 1.25rem 2rem; }
+    .body-container { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem 4rem; }
+    .sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-name">Ragasudha M.</a>
+  <a href="../index.html#work" class="nav-back">← Back to work</a>
+</nav>
+
+<div class="hero">
+  <p class="eyebrow">Webpage Revamp · Atlassian · 2023</p>
+  <h1>Atlassian Automation — product webpage revamp</h1>
+  <div class="hero-meta">
+    <span class="meta-item">Atlassian</span><span class="meta-dot"></span>
+    <span class="meta-item">atlassian.com/platform/automation</span><span class="meta-dot"></span>
+    <span class="meta-item">Timed to Team '23</span>
+  </div>
+  <p class="hero-summary">Refreshed the Atlassian Automation product webpage ahead of Team — Atlassian's annual flagship event. Updated messaging and positioning to reflect evolved product themes, ensured consistency across channels, and refreshed the customer logo section with recently acquired logos.</p>
+  <div class="outcomes-row">
+    <span class="outcome">Messaging refresh</span>
+    <span class="outcome">Positioning update</span>
+    <span class="outcome">Cross-channel consistency</span>
+    <span class="outcome">Customer logo update</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="body-container">
+  <div class="main-content">
+
+    <h2>The page</h2>
+    <p>The Atlassian Automation webpage sits at <a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--border);">atlassian.com/platform/automation</a> and serves as the primary destination for anyone researching Atlassian's automation capabilities across Jira, Confluence, and the broader platform.</p>
+
+    <div class="page-preview">
+      <p class="preview-label">Live page — atlassian.com/platform/automation</p>
+      <div class="preview-placeholder">
+        <p>Screenshot to be added</p>
+        <a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" class="preview-link">View the live page →</a>
+      </div>
+    </div>
+
+    <h2>What I did</h2>
+    <p>The revamp was scoped to three things: messaging and positioning, cross-channel consistency, and the customer logo section. It wasn't a full redesign — the structure and layout stayed intact. The work was about making sure the words and proof points on the page were doing their job as effectively as possible ahead of a high-visibility moment.</p>
+
+    <p><strong>Messaging and positioning update.</strong> The page headline and key value propositions were refreshed to reflect how we were talking about Automation at that point in time — sharper language around what the product actually does for teams, aligned to the themes we were leading with at Team '23. The core messaging pillars on the live page — removing bottlenecks, scaling operations, enhancing productivity — reflect the positioning framework I worked within.</p>
+
+    <p><strong>Cross-channel consistency.</strong> The updated messaging wasn't just for the webpage. Part of the work involved making sure the same themes were reflected consistently across related channels — blogs, social, and community forums — so that anyone encountering Atlassian Automation in different places got a coherent story. Inconsistent messaging across channels is a common PMM failure mode, and this was a deliberate effort to close that gap ahead of the event.</p>
+
+    <p><strong>Customer logo refresh.</strong> Updated the social proof section with recently acquired customer logos — companies like Canva, Dish Wireless, Instacart, Royal Caribbean, and Ferrari — to reflect the actual breadth of the customer base and strengthen the enterprise credibility signal on the page.</p>
+
+    <div class="callout">
+      <p class="callout-label">Why timing mattered</p>
+      <p>Team is Atlassian's biggest annual event — the moment when the most eyes are on the product and the brand. Making sure the Automation webpage was sharp and consistent before that traffic spike was the whole point of the timing. A revamp after the event would have missed the window.</p>
+    </div>
+
+    <h2>The messaging on the page</h2>
+    <p>The headline — <em>"Gain a competitive edge with powerful automation"</em> — positions Automation as a strategic investment, not just a productivity tool. The sub-headline — <em>"Replace manual, time-consuming work with modern processes and workflows"</em> — makes the value concrete and immediate. The three pillars (remove bottlenecks, scale operations, enhance productivity) map cleanly to the different reasons teams adopt automation: speed, growth, and efficiency.</p>
+
+    <a href="../index.html#work" class="back-link">← Back to all work</a>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <p class="sidebar-label">Project details</p>
+      <div class="sidebar-item"><strong>Company</strong>Atlassian</div>
+      <div class="sidebar-item"><strong>Year</strong>2023</div>
+      <div class="sidebar-item"><strong>Timing</strong>Ahead of Team '23</div>
+      <div class="sidebar-item"><strong>Scope</strong>Messaging, positioning, cross-channel consistency, customer logos</div>
+      <div class="sidebar-item"><strong>Live page</strong><a href="https://www.atlassian.com/platform/automation" target="_blank" rel="noopener" style="color: var(--ink-muted); font-size: 0.8rem;">atlassian.com/platform/automation</a></div>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-label">Skills demonstrated</p>
+      <span class="skill-tag">Messaging</span>
+      <span class="skill-tag">Positioning</span>
+      <span class="skill-tag">Web copy</span>
+      <span class="skill-tag">Cross-channel consistency</span>
+      <span class="skill-tag">Social proof</span>
+      <span class="skill-tag">Launch readiness</span>
+    </div>
+  </aside>
+</div>
+
+<footer>© 2026 Ragasudha Mardhaniyogan · <a href="../index.html" style="color: var(--ink-faint);">Back to portfolio</a></footer>
+</body>
+</html>
