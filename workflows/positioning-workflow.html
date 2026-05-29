@@ -25,29 +25,22 @@
   .container { max-width: 740px; margin: 0 auto; padding: 7rem 2rem 5rem; }
   .eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
   h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; }
-  .intro { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
-  .tools-used { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 3rem; }
+  .intro { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+  .tools-used { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2.5rem; }
   .tool { font-size: 0.78rem; letter-spacing: 0.05em; padding: 4px 12px; border: 1px solid var(--border); border-radius: 2px; color: var(--ink-muted); }
-  h2 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 2.5rem; }
-  h3 { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; margin-top: 1.5rem; }
-  p { color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.85; }
-  ul { margin: 0.75rem 0 1rem 1.25rem; }
-  li { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.8; margin-bottom: 0.35rem; }
-  strong { color: var(--ink); font-weight: 500; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 0.75rem; margin-top: 2.5rem; }
+  h3 { font-size: 0.95rem; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+  p { color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.85; font-size: 0.95rem; }
   .time-badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 0.78rem; padding: 4px 12px; border-radius: 2px; margin-bottom: 2rem; }
-  .step { background: var(--paper-warm); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; padding: 1.5rem; margin: 1.5rem 0; }
-  .step-num { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
-  .step-title { font-weight: 500; font-size: 1rem; margin-bottom: 0.5rem; color: var(--ink); }
-  .step p { margin-bottom: 0; }
-  .prompt-block { background: #1a1a18; border-radius: 4px; padding: 1.5rem; margin: 1.25rem 0; }
-  .prompt-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
-  .prompt-text { font-family: var(--mono); font-size: 0.82rem; color: #e8e4dc; line-height: 1.7; white-space: pre-wrap; }
-  .output-block { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.25rem 0; }
-  .output-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
-  .output-text { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.8; }
-  .callout { background: var(--paper-warm); border-left: 3px solid var(--accent); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; }
-  .callout-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
-  .callout p { margin: 0; font-size: 0.92rem; }
+  .step { background: var(--paper-warm); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .step-num { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem; }
+  .step-title { font-weight: 500; font-size: 0.95rem; color: var(--ink); }
+  .prompt-block { background: #1a1a18; border-radius: 4px; padding: 1.5rem; margin: 1rem 0; }
+  .prompt-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
+  .prompt-text { font-family: var(--mono); font-size: 0.8rem; color: #e8e4dc; line-height: 1.7; white-space: pre-wrap; }
+  .output-block { background: var(--paper-warm); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1rem 0; }
+  .output-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
+  .output-text { font-size: 0.87rem; color: var(--ink-muted); line-height: 1.8; }
   footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--border); margin-top: 4rem; }
   @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } .container { padding: 6rem 1.25rem 3rem; } }
 </style>
@@ -62,116 +55,92 @@
   <p class="eyebrow">AI Workflow · Positioning</p>
   <h1>Drafting positioning documents 3x faster</h1>
   <span class="time-badge">⏱ 2–4 hours end-to-end</span>
-  <p class="intro">Positioning is the hardest PMM deliverable to get right — and historically one of the slowest to produce. The research, synthesis, stakeholder input, and iteration cycles can stretch a positioning project over weeks. This workflow compresses the drafting phase dramatically, freeing up more time for the part that actually matters: refining and stress-testing the positioning with stakeholders.</p>
+  <p class="intro">Use this workflow to go from raw research inputs to a structured positioning document in a focused half-day session. Start with your ICP, pain points, competitive landscape, and win/loss themes. Claude handles the first draft — you refine and take it to stakeholders.</p>
 
   <div class="tools-used">
     <span class="tool">Claude</span>
     <span class="tool">Notion</span>
   </div>
 
-  <h2>What this workflow does — and doesn't do</h2>
-  <p>AI can accelerate the drafting and structuring of a positioning document. It cannot replace the inputs that make positioning credible: customer interviews, win/loss analysis, sales conversations, and a deep understanding of how competitors are actually perceived in the market. This workflow assumes you've done that research. If you haven't, start there.</p>
-  <p>What changes with AI: instead of staring at a blank doc trying to synthesize everything into coherent positioning, you feed your research into Claude and get a structured first draft in minutes — one you can then push back on, refine, and take to stakeholders.</p>
-
   <div class="step">
     <p class="step-num">Step 1 · ~30 min</p>
-    <p class="step-title">Assemble your raw inputs</p>
-    <p>Before opening Claude, pull together everything you know: ICP description, key customer pain points (from interviews or sales calls), how you currently describe the product, competitive positioning you've observed, and any win/loss themes. The quality of your output is only as good as the quality of your inputs — don't skip this.</p>
+    <p class="step-title">Assemble your inputs before opening Claude</p>
+  </div>
+  <p>Gather: ICP description, customer pain points, current product description, 2–3 competitor positioning snapshots, your strongest differentiators, and where you typically lose deals.</p>
+
+  <div class="step">
+    <p class="step-num">Step 2 · ~20 min</p>
+    <p class="step-title">Generate 3 positioning options</p>
   </div>
 
-  <h2>The prompts</h2>
-
-  <h3>Prompt 1 — Generate positioning options</h3>
   <div class="prompt-block">
-    <p class="prompt-label">Claude prompt — positioning options</p>
+    <p class="prompt-label">Prompt</p>
     <p class="prompt-text">I'm a product marketing manager working on positioning for [product name].
 
-Here's what I know:
+ICP: [role, company size, industry]
+Core pain points: [list 3-5]
+How we currently describe the product: [current tagline or description]
+Competitors and how they position: [2-3 competitors]
+Our strongest differentiators: [list 2-3]
+Where we lose deals: [list 1-2]
 
-ICP: [describe your ideal customer profile — role, company size, industry]
-
-Their core pain points: [list 3-5 pain points from customer research]
-
-How we currently describe the product: [paste your current tagline or description]
-
-Key competitors and how they position: [brief description of 2-3 competitors]
-
-Our strongest differentiators (what we hear from customers who choose us): [list 2-3]
-
-Where we lose deals (honest): [list 1-2 weaknesses or gaps]
-
-Please generate 3 distinct positioning options. For each one give me:
-- A positioning statement (who it's for, what it does, why it's different)
-- A one-line tagline
-- The core narrative logic — why this positioning would resonate with the ICP
+Generate 3 distinct positioning options. For each:
+- Positioning statement (who it's for, what it does, why it's different)
+- One-line tagline
+- Why this would resonate with the ICP
 - What it de-emphasizes or risks
 
-Be direct. Flag if any of the inputs seem contradictory or weak.</p>
+Be direct. Flag anything that seems contradictory or weak.</p>
   </div>
 
-  <h3>Sample output (illustrative):</h3>
+  <h3>Sample output:</h3>
   <div class="output-block">
     <p class="output-label">Claude's response — excerpt</p>
     <p class="output-text"><strong>Option 1 — Lead with speed-to-value</strong><br>
 Positioning: For DevOps teams drowning in manual governance tasks, [Product] is the only platform that enforces complex cloud policies automatically — so engineers can focus on shipping, not configuration.<br>
 Tagline: "Govern without slowing down."<br>
-Logic: Your win/loss data shows you beat competitors when buyers prioritize developer experience. This positioning doubles down on that.<br>
+Why it resonates: Win/loss data shows you beat competitors when buyers prioritize developer experience.<br>
 Risk: De-emphasizes compliance depth — may not land with heavily regulated industries.<br><br>
-<strong>Note:</strong> Your "strongest differentiator" and "how we currently describe the product" are pointing in different directions — customers value the automation, but your current description leads with cost savings. Worth resolving before finalizing.</p>
-  </div>
-
-  <div class="callout">
-    <p class="callout-label">Why 3 options matter</p>
-    <p>Presenting one positioning statement to stakeholders invites editing. Presenting three invites a strategic conversation about which direction to bet on. The options also help surface internal disagreements early — which is valuable information.</p>
+<strong>Note:</strong> Your "strongest differentiator" and "current description" are pointing in different directions. Worth resolving before finalizing.</p>
   </div>
 
   <div class="step">
-    <p class="step-num">Step 2 · ~20 min</p>
+    <p class="step-num">Step 3 · ~20 min</p>
     <p class="step-title">Stress-test your preferred option</p>
-    <p>Once you've picked the direction that feels strongest, run it through a second prompt to pressure-test it before taking it to stakeholders.</p>
   </div>
 
   <div class="prompt-block">
-    <p class="prompt-label">Claude prompt — stress test</p>
-    <p class="prompt-text">I've chosen this positioning direction for [product]:
+    <p class="prompt-label">Prompt</p>
+    <p class="prompt-text">I've chosen this positioning for [product]:
 
-[paste your chosen positioning statement]
+[paste chosen positioning statement]
 
-Please stress-test it by:
-1. Arguing against it — what are the strongest reasons this positioning could fail or fall flat?
-2. How would a skeptical sales rep push back on this in a customer conversation?
+Stress-test it:
+1. What are the strongest reasons this could fail or fall flat?
+2. How would a skeptical sales rep push back in a customer conversation?
 3. Which competitor is best positioned to attack this, and how?
-4. What proof points would I need to make this credible — and do I have them?
-
-Be harsh. I'd rather find the holes now than in a customer meeting.</p>
+4. What proof points do I need to make this credible — and do I have them?</p>
   </div>
 
   <div class="step">
-    <p class="step-num">Step 3 · ~30 min</p>
-    <p class="step-title">Build the full positioning document in Notion</p>
-    <p>Take your chosen positioning and stress-test feedback into Notion. Use Claude one more time to expand the positioning statement into a full document — with messaging pillars, proof points per pillar, and persona-specific angles. Then review and edit: the strategic layer, the judgment calls, and the internal framing still need a human PMM.</p>
+    <p class="step-num">Step 4 · ~30 min</p>
+    <p class="step-title">Expand into a full positioning document</p>
   </div>
 
   <div class="prompt-block">
-    <p class="prompt-label">Claude prompt — full document</p>
+    <p class="prompt-label">Prompt</p>
     <p class="prompt-text">Based on this positioning statement: [paste it]
+Proof points available: [list them]
 
-And these proof points I have available: [list them]
-
-Please draft a positioning document with:
-1. Positioning statement (refined)
-2. Three messaging pillars — each with a one-line claim and 2-3 supporting proof points
+Draft a positioning document with:
+1. Refined positioning statement
+2. Three messaging pillars — each with a one-line claim and 2-3 proof points
 3. How the positioning angles differently for [Persona A] vs [Persona B]
-4. Three things this positioning means we should stop saying (messaging to retire)
+4. Three messages to retire
 
-Format it cleanly — I'll paste this into Notion and edit from there.</p>
+Format cleanly — I'll paste into Notion and edit from there.</p>
   </div>
 
-  <h2>What I contribute that AI can't</h2>
-  <p>The workflow produces a strong draft fast. What it can't do: know which proof points will actually land in your specific market, judge whether a positioning claim is credible given your brand equity, or navigate the internal politics of getting stakeholders aligned. That's the PMM's job — and where the real work happens after the draft exists.</p>
-
-  <h2>Time saved</h2>
-  <p>A positioning document that used to take me 2–3 days of drafting and iteration now takes a focused half-day session. The time savings go back into more stakeholder conversations and better research — which is where positioning actually gets good.</p>
 </div>
 
 <footer>© 2026 Ragasudha Mardhaniyogan · <a href="../index.html" style="color: var(--ink-faint);">Back to portfolio</a></footer>
